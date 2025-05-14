@@ -1,6 +1,11 @@
 export const getWebsocketUrl = () => {
-    // 固定为 Cloudflare Worker 代理地址，安全且无需用户输入
-    return 'wss://geminiapi.keithhe2021.workers.dev/v1';
+    // 走 Cloudflare Worker 统一代理 Gemini API
+    return 'https://geminiapi.keithhe2021.workers.dev/v1/gemini';
+};
+
+export const getDeepgramApiUrl = () => {
+    // 使用 Deepgram 官方 listen API
+    return 'https://api.deepgram.com/v1/listen';
 };
 
 export const getDeepgramApiKey = () => {
