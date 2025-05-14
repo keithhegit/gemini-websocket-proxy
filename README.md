@@ -35,7 +35,7 @@
    export default {
      async fetch(request, env) {
        // 代理 Gemini API
-       const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent", {
+       const response = await fetch("https://geminiapi.keithhe2021.workers.dev/v1/gemini", {
          method: request.method,
          headers: {
            "Content-Type": "application/json",
@@ -50,7 +50,7 @@
      },
    };
    ```
-4. 部署后，获得你的 Gemini Worker 代理地址（如 `https://geminiapi.xxx.workers.dev/v1`）。
+4. 部署后，获得你的 Gemini Worker 代理地址（如 `https://geminiapi.keithhe2021.workers.dev/v1/gemini`）。
 5. 前端 `js/config/config.js` 已写死为你的 Worker 代理地址。
 
 ### 2. Cloudflare Worker 代理 Deepgram API
